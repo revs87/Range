@@ -18,6 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="rv.achart.range.RangeActivity" />
+
+        <activity android:name="rv.achart.range.RangeCombinedActivity" />
+
+        <activity android:name="rv.achart.range.RangeAreaActivity" />
+
+        <activity android:name="org.achartengine.GraphicalActivity" />
     </application>
 
 </manifest>
