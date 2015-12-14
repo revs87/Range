@@ -134,6 +134,8 @@ public class RangeAreaActivity extends Activity {
     private XYMultipleSeriesRenderer getXyMultipleSeriesRenderer(int[] x) {
         XYMultipleSeriesRenderer multiRenderer = new XYMultipleSeriesRenderer();
         multiRenderer.setXLabels(0);
+        multiRenderer.setLabelsColor(backgroundColor);
+        multiRenderer.setAxesColor(backgroundColor);
 
         /***
          * Customizing graphs
@@ -160,6 +162,9 @@ public class RangeAreaActivity extends Activity {
         multiRenderer.setFitLegend(false);
         // setting displaying line on grid
         multiRenderer.setShowGrid(false);
+        multiRenderer.setShowGridX(false);
+        multiRenderer.setShowGridY(false);
+        multiRenderer.setGridColor(backgroundColor);
         // setting zoom to false
         multiRenderer.setZoomEnabled(false);
         // setting external zoom functions to false
@@ -188,7 +193,7 @@ public class RangeAreaActivity extends Activity {
         // setting used to move the graph on xaxiz to .5 to the right
 //        multiRenderer.setXAxisMax(11);
         // setting bar size or space between two bars
-        // multiRenderer.setBarSpacing(0.5);
+         multiRenderer.setBarSpacing(0);
         // Setting background color of the graph to transparent
         multiRenderer.setBackgroundColor(backgroundColor);
         // Setting margin color of the graph to transparent
