@@ -25,6 +25,8 @@
 
         <activity android:name="rv.achart.range.RangeAreaActivity" />
 
+        <activity android:name="rv.achart.range.DoubleRangeAreaActivity" />
+
         <activity android:name="org.achartengine.GraphicalActivity" />
     </application>
 

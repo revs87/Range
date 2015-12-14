@@ -45,7 +45,8 @@ public class ApplicationActivity extends AppCompatActivity {
                 Intent intent1 = new Intent(activity, RangeActivity.class);
                 Intent intent2 = new Intent(activity, RangeCombinedActivity.class);
                 Intent intent3 = new Intent(activity, RangeAreaActivity.class);
-                startActivity(intent3);
+                Intent intent4 = new Intent(activity, DoubleRangeAreaActivity.class);
+                startActivity(intent4);
             }
         });
     }
