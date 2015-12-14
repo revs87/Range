@@ -73,6 +73,12 @@ public class RangeCombinedActivity extends Activity {
         expenseRenderer.setFillPoints(true);
         expenseRenderer.setLineWidth(2);
         expenseRenderer.setDisplayChartValues(true);
+        XYSeriesRenderer.FillOutsideLine fillOutsideLine =
+                new XYSeriesRenderer.FillOutsideLine(XYSeriesRenderer.FillOutsideLine.Type.BOUNDS_ALL
+                );
+        fillOutsideLine.setColor(Color.WHITE);
+        expenseRenderer.addFillOutsideLine(fillOutsideLine);
+
 
         // Creating a XYMultipleSeriesRenderer to customize the whole chart
         XYMultipleSeriesRenderer multiRenderer = new XYMultipleSeriesRenderer();

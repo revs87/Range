@@ -72,8 +72,8 @@ public class RangeActivity extends Activity {
         // Include low and max value
         renderer.setDisplayBoundingPoints(false);
         // we add point markers
-        renderer.setPointStyle(PointStyle.CIRCLE);
-        renderer.setPointStrokeWidth(0);
+        renderer.setPointStyle(PointStyle.POINT);
+//        renderer.setPointStrokeWidth(0);
 
 
         XYMultipleSeriesRenderer mRenderer = new XYMultipleSeriesRenderer();
@@ -97,6 +97,16 @@ public class RangeActivity extends Activity {
         XYMultipleSeriesDataset dataset2 = new XYMultipleSeriesDataset();
         dataset1.addSeries(incomeSeries);
         dataset2.addSeries(expenseSeries);
+
+        XYSeriesRenderer.FillOutsideLine fill =
+                new XYSeriesRenderer.FillOutsideLine(XYSeriesRenderer.FillOutsideLine.Type.BELOW
+                );
+
+        fill.setColor(Color.MAGENTA);
+        // the minimum and maximum index values for the fill range
+        fill.setFillRange(new int[] {1, 5});
+        renderer.addFillOutsideLine(fill);
+
 
         GraphicalView chartView = ChartFactory.getTimeChartView(this, dataset1, mRenderer, null);
 //        GraphicalView chartView = ChartFactory.getLineChartView(this, dataset1, mRenderer);
